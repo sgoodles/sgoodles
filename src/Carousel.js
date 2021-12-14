@@ -41,7 +41,7 @@ function Carousell(props) {
     ];
 
     return (
-        <Carousel
+        <Carousel centerMode={true} 
         NavButton={({onClick, className, style, next, prev}) => {
             // Other logic
     

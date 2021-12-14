@@ -1,3 +1,24 @@
 body{
   background-color:#0c111b;
 }
+
+.vedio-row{
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+.vedio-row::-webkit-scrollbar{
+  display:flex;
+}
+
+.span{
+  margin: 40px ;
+  font-weight: 500;
+  font-size:20px;
+  color: #fff;
+  cursor: pointer;
+}
+.watch{
+  margin-top:10px;
+}
