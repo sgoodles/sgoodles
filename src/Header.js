@@ -3,18 +3,38 @@ import './Header.css';
 import { Input } from "@material-ui/core";
 import Carousel from './Carousel';
 import Tv from './tv';
+import './login.css';
+
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import Dialog from '@material-ui/core/Dialog';
+import Button from '@material-ui/core/Button';
 
 
 
 
 
-function Header({handleLoginClick}) {
-    const handleClick=() => {
-        handleLoginClick()
-    }
+function Header({ handleLoginClick }) {
+    // const handleClick=() => {
+    //     handleLoginClick()
+    // }
+
+    const [open, setOpen] = React.useState(false);
+
+    const handleClickOpen = () => {
+
+        setOpen(true);
+
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
 
 
-    
+
     const [channels, setChannels] = useState("Channels");
     const [languages, setLanguages] = useState("Languages");
     const [genres, setGenres] = useState("Genres");
@@ -132,9 +152,69 @@ function Header({handleLoginClick}) {
                     <Input className="search" placeholder="Search" />
                     <i className="fas fa-search"></i>
                     <button >SUBSCRIBE</button>
-                    <span onClick={handleClick} className="loginicon">Login</span>
-                    
-    
+                    <span onClick={handleClickOpen} className="loginicon">Login</span>
+                    {/* <Button variant="outlined" 
+              color="primary" onClick={handleClickOpen}>
+        Open My Custom Dialog
+      </Button> */}
+                    <Dialog open={open} onClose={handleClose} 
+                    PaperProps={{
+                        style: {
+                          
+                          border:'none',
+                          overflowX: 'hidden',
+                          height:'500px',
+                        //   width:'500px'
+                        },
+                      }}
+                    >
+
+
+                        <div class="container">
+                            <div class="screen">
+                                <div class="screen__content">
+                                    <form class="login">
+                                        <div class="login__field">
+                                            <i class="login__icon fas fa-user"></i>
+                                            <input type="text" class="login__input" placeholder="User name / Email" />
+                                        </div>
+                                        <div class="login__field">
+                                            <i class="login__icon fas fa-lock"></i>
+                                            <input type="password" class="login__input" placeholder="Password" />
+                                        </div>
+                                        <button class="button login__submit">
+                                            <span class="button__text">Log In Now</span>
+                                            <i class="button__icon fas fa-chevron-right"></i>
+                                        </button>
+                                    </form>
+                                    <div class="social-login">
+                                        <h3>log in via</h3>
+                                        <div class="social-icons">
+                                            <a href="#" class="social-login__icon fab fa-instagram"></a>
+                                            <a href="#" class="social-login__icon fab fa-facebook"></a>
+                                            <a href="#" class="social-login__icon fab fa-twitter"></a>
+                                        </div>
+                                        <Button onClick={handleClose} color="primary">
+                            Close
+                        </Button>
+                        <Button onClick={handleClose} color="primary" autoFocus>
+                            Yes
+                        </Button>
+                                    </div>
+                                </div>
+                                <div class="screen__background">
+                                    <span class="screen__background__shape screen__background__shape4"></span>
+                                    <span class="screen__background__shape screen__background__shape3"></span>
+                                    <span class="screen__background__shape screen__background__shape2"></span>
+                                    <span class="screen__background__shape screen__background__shape1"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+
+                    </Dialog>
+
 
                 </div>
             </div>
@@ -142,7 +222,7 @@ function Header({handleLoginClick}) {
 
 
         </div>
-        
+
 
 
     );
