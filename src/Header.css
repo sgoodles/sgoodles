@@ -18,6 +18,8 @@
     display: flex;
     align-items: center;
     margin-left: 40px;
+    visibility: visible;
+    z-index: 1000;
     
 }
 
@@ -76,7 +78,7 @@
     cursor: pointer;
     margin-left:10px;
     font-size:12px;
-    font-weight: 800;
+    font-weight: 600;
     color: #fff;
 }
 

@@ -1,0 +1,214 @@
+.footer .footer-left{
+    /* margin: 0 auto; */
+    max-width: calc(100vw - 105px);
+}
+
+.footer-left > span{
+    font-size:14px;
+    font-weight:400;
+    text-transform: capitalize;
+    padding:0 20px 0 0;
+    cursor: pointer;
+    color: rgba(255,255,255,0.8);
+    padding: 10px;
+    /* margin-top:20px; */
+    display: inline-block;
+    overflow-wrap: break-word;
+}
+
+.footer-left > .copyright {
+    
+    font-weight:400;
+    margin-left: 10px;
+    padding-top: 11px;
+    /* padding-right: 15px; */
+    font-size: 12px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.8);
+    max-width: calc(100vw - 105px);
+    width: 44vw;
+    overflow-wrap: break-word;
+}
+
+.footer-left >span:hover{
+    color:#1f80e0;
+    transition:0.3s;
+}
+
+.footer {
+    margin-top:40px;
+    display: flex;
+    align-items: center;
+    padding:30px;
+    background:#030b17;
+    justify-content:space-between;
+}
+
+.footer-right {
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    /* justify-content: space-between; */
+    padding-right: 0px;
+    padding-left: 20px;
+    max-width: 540px;
+    
+
+}
+ a{
+    text-decoration: none;
+    outline: 0;
+    color: #1f80e0;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+ .footer-right .icons  i{
+    font-size:50px;
+    margin-left: 10px;
+    height: 150px;
+    width:150px;   
+}
+
+.fa-facebook-square{
+    color: #3b5998;
+  background-image: linear-gradient( to bottom, transparent 20%, white 20%, white 93%, transparent 93% );
+  background-size: 70%;
+  background-position: 70% 0;
+  background-repeat: no-repeat;
+  
+}
+
+.fa-facebook-square:hover{
+    color: white;
+  background-image: linear-gradient( to bottom, transparent 20%, #3b5998 20%, #3b5998 93%, transparent 93% );
+  background-size: 70%;
+  background-position: 70% 0;
+  background-repeat: no-repeat;
+  
+}
+
+.fa-twitter-square{
+    color: #3b5998;
+  background-image: linear-gradient( to bottom, transparent 20%, white 20%, white 93%, transparent 93% );
+  background-size: 80%;
+  background-position: 70% 0;
+  background-repeat: no-repeat;
+  
+}
+
+.fa-twitter-square:hover{
+    color: white;
+  background-image: linear-gradient( to bottom, transparent 20%, #3b5998 20%, #3b5998 93%, transparent 93% );
+  background-size: 80%;
+  background-position: 70% 0;
+  background-repeat: no-repeat;
+  
+}
+
+
+
+.footer-right > span{
+    color:#919191;
+    font-size:14px;
+    padding-bottom: 7px;
+    font-weight: 500;
+}
+.foot-right{
+    float: right;
+}
+.foot-right{
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    /* justify-content: space-between; */
+    padding-right: 0px;
+    padding-left: 20px;
+    max-width: 540px;
+    position: relative;
+}
+
+.foot-right > span{
+    position:absolute;
+    left:100px;
+    color:#919191;
+    font-size:14px;
+    padding-bottom: 7px;
+    font-weight: 500;
+    top:25px;
+}
+.foot-right img{
+    height: 120px;
+    width: 120px;
+    margin-top:20px;
+}
+.foot-right .play{
+    margin-right: 10px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .footer-left .copyright{
+        width: 40vw;
+    }
+    .footer-left {
+        width:40vw;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+      .footer{
+          display: block;
+      }
+    .footer-left {
+        width:90vw;
+    }
+    .footer-left .copyright {
+        width:100vw;
+        margin-bottom: 25px;
+    }
+    .foot-right img{
+        margin-top: 31px;
+        /* width:16vw;
+        height:16vh; */
+    }
+    .footer-right{
+        padding-left: 0px;
+    }
+    .foot-right{
+        margin-top: -119px;
+    }
+  }
+
+  @media only screen and (max-width: 425px) {
+    .foot-right img{
+        /* width: 25vw;
+        height: 25vh; */
+        width:25vw;
+        height: 25vw;
+        margin-top: 40px;
+    }
+    .footer-right .icons i{
+        font-size:12vw;
+    }
+}
+
+@media only screen and (max-width:375px){
+    .foot-right span{
+        top: 31px;
+    }
+    .foot-right img {
+        margin-top: 50px;
+        margin-right: -18px;
+    }
+}
+
+@media only screen and (max-width:320px){
+    .foot-right span{
+        top: 41px;
+    }
+    .foot-right img {
+        margin-top: 60px;
+        margin-right: -17px;
+    }
+    
+}

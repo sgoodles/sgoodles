@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import './Header.css';
 import { Input } from "@material-ui/core";
 import Carousel from './Carousel';
-import Tv from './tv';
+import Tv from './Tv';
 import './login.css';
+import { Link } from "react-router-dom";
+import Vedios from "./Vedios";
+import Footer from './Footer';
 
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
@@ -66,10 +69,10 @@ function Header({ handleLoginClick }) {
     const [formulaE, setFormulaE] = useState("Formula E");
     const [material, setMaterial] = useState("Material Arts");
     const [tv, setTv] = useState("TV");
-    const [movies, setMovies] = useState("Movies");
-    const [premium, setPremium] = useState("Premium");
-    const [sports, setSports] = useState("Sports");
-    const [ott, setOtt] = useState("Ott");
+    const [movie, setMovie] = useState("MOVIES");
+    const [premium, setPremium] = useState("PREMIUM");
+    const [sport, setSport] = useState("SPORTS");
+    const [ott, setOtt] = useState("OTT");
     return (
         <div className="header">
             <div className="header-content">
@@ -102,7 +105,7 @@ function Header({ handleLoginClick }) {
                                     <li><a href="#">more...</a></li>
                                 </ul>
                             </li>
-                            <li id="categories" class="movies"><a href="/movies">{movies}</a>
+                            <li id="categories" class="movies"><a href="/movies">{movie}</a>
                                 <ul>
                                     <li><a href="#">{hindi}</a></li>
                                     <li><a href="#">{bengali}</a></li>
@@ -114,7 +117,7 @@ function Header({ handleLoginClick }) {
                                     <li><a href="#">{kannada}</a></li>
                                 </ul>
                             </li>
-                            <li id="categories" className="sports"><a href="/sports">{sports}</a>
+                            <li id="categories" className="sports"><a href="/sports">{sport}</a>
                                 <ul>
                                     <li><a href="#">{cricket}</a></li>
                                     <li><a href="#">{football}</a></li>
@@ -157,16 +160,16 @@ function Header({ handleLoginClick }) {
               color="primary" onClick={handleClickOpen}>
         Open My Custom Dialog
       </Button> */}
-                    <Dialog open={open} onClose={handleClose} 
-                    PaperProps={{
-                        style: {
-                          
-                          border:'none',
-                          overflowX: 'hidden',
-                          height:'500px',
-                        //   width:'500px'
-                        },
-                      }}
+                    <Dialog open={open} onClose={handleClose}
+                        PaperProps={{
+                            style: {
+
+                                border: 'none',
+                                overflow: 'hidden',
+                                height: '500px',
+                                //   width:'500px'
+                            },
+                        }}
                     >
 
 
@@ -194,12 +197,14 @@ function Header({ handleLoginClick }) {
                                             <a href="#" class="social-login__icon fab fa-facebook"></a>
                                             <a href="#" class="social-login__icon fab fa-twitter"></a>
                                         </div>
-                                        <Button onClick={handleClose} color="primary">
-                            Close
-                        </Button>
-                        <Button onClick={handleClose} color="primary" autoFocus>
-                            Yes
-                        </Button>
+                                        <Button onClick={handleClose} color="primary"
+
+                                        >
+                                            Close
+                                        </Button>
+                                        <Button onClick={handleClose} color="primary" autoFocus>
+                                            Yes
+                                        </Button>
                                     </div>
                                 </div>
                                 <div class="screen__background">
@@ -211,7 +216,7 @@ function Header({ handleLoginClick }) {
                             </div>
                         </div>
 
-                        
+
 
                     </Dialog>
 
@@ -220,7 +225,9 @@ function Header({ handleLoginClick }) {
             </div>
 
 
-
+            <Carousel />
+            <Vedios />
+            <Footer />
         </div>
 
 

@@ -2,7 +2,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	min-height: 100vh;
+	/* min-height: 100vh; */
 }
 
 .screen {		
@@ -74,7 +74,7 @@
 .login {
 	width: 320px;
 	padding: 30px;
-	padding-top: 156px;
+	padding-top: 100px;
 }
 
 .login__field {
@@ -142,7 +142,7 @@
 	height: 140px;
 	width: 160px;
 	text-align: center;
-	bottom: 0px;
+	bottom: 90px;
 	right: 0px;
 	color: #fff;
 }
@@ -162,4 +162,28 @@
 
 .social-login__icon:hover {
 	transform: scale(1.5);	
+}
+
+/* .MuiButton-label {
+	background-color: violet;
+    width: 100%;
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+} */
+
+span.MuiButton-label {
+	/* margin-top: -148px; */
+    color: #ffffff;
+	/* font-weight: 600;
+	border-radius:5px;
+    transition: 0.5s;
+    background-color: rgb(109, 109, 245);
+    margin-left: -339px;
+    width: 60px;
+	height:30px */
+}
+
+span.MuiButton-label :hover {
+	color: rgb(109, 109, 245);
 }
