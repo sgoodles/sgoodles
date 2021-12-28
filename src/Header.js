@@ -30,48 +30,48 @@ const Header = () => {
 
 
     return (
-        <div className="header">
-            <div className="header-content">
-                <div className="header-left">
-                    <div class="dropdown">
-                        <div class="dropbtn"><i class="fas fa-bars"></i></div>
-                        <div class="dropdown-content">
-                            <a href="#"><i class="fas fa-tv"></i>Channels</a>
-                            <a href="#"><i class="fas fa-language"></i>Languages</a>
-                            <a href="#"><i class="fas fa-theater-masks"></i>Genres</a>
+        <div className="header bg-gray-900 py-0 sticky visible z-1000 top-0 ">
+            <div className="header-content flex justify-between items-center">
+                <div className="header-left pb-2 text-16xl font-normal cursor-pointer flex items-center mx-10 visible z-1000">
+                    <div className="dropdown relative inline-block">
+                        <div className="dropbtn border-none"><i class="fas fa-bars my-6 whitesmoke"></i></div>
+                        <div className="dropdown-content">
+                            <a href="#" className="no-underline block"><i class="fas fa-tv pr-4"></i>Channels</a>
+                            <a href="#" className="no-underline block"><i class="fas fa-language pr-4"></i>Languages</a>
+                            <a href="#" className="no-underline block"><i class="fas fa-theater-masks pr-4"></i>Genres</a>
                         </div>
                     </div>
-                    <h3>OTT</h3>
-                    <span id="menu">
-                        <ul>
-                            <li id="categories"><a className="link" href="/tv">TV</a>
+                    <h3 className="mx-3 mr-0 my-1 whitesmoke">OTT</h3>
+                    <span id="menu" className="my-0.5 #ffffffcc cursor-pointer relative ">
+                        <ul className="relative m-0 p-0">
+                            <li id="categories" className="relative inline"><a className="link float-left" href="/tv">TV</a>
                                 <ul>
                                     {UpdatedLists}
                                 </ul>
                             </li>
-                            <li id="categories" class="movies"><a href="/movies">Movies</a>
+                            <li id="categories" class="movies relative inline"><a className="relative p-4" href="/movies">Movies</a>
                                 <ul>
                                     {UpdatedLists1}
                                 </ul>
                             </li>
-                            <li id="categories" className="sports"><a href="/sports">Sports</a>
+                            <li id="categories" className="sports relative inline"><a href="/sports">Sports</a>
                                 <ul>
                                     {UpdatedLists2}
                                 </ul>
                             </li>
-                            <li id="categories" ><a href="/tv">Premium</a>
+                            <li id="categories" className="relative inline"><a href="/tv">Premium</a>
                             </li>
-                            <li id="categories" ><a href="/tv">OTT</a>
+                            <li id="categories" className="relative inline"><a href="/tv">OTT</a>
                             </li>
                         </ul>
                     </span>
                 </div>
                 <div className="header-right">
-                    <Input className="search" placeholder="Search" />
-                    <i className="fas fa-search"></i>
-                    <button >SUBSCRIBE</button>
+                    <Input className="search mr-3" placeholder="Search" />
+                    <i className="fas fa-search -ml-5 #5a6268"></i>
+                    <button className="outline-0 p-1 border-none h-6 rounded cursor-pointer ml-5 text-sm font-semibold ">SUBSCRIBE</button>
                     <Login />
-                    <span className="loginicon">LogOut</span>
+                    {/* <span className="loginicon">LogOut</span> */}
 
                 </div>
             </div>

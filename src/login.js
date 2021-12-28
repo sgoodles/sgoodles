@@ -83,13 +83,13 @@ function Login() {
             console.log("error response  ", error.response.data);
             const data1 = error.response;
             // console.log(JSON.stringify(error.response.data));
-            if (data1.status === 422 || !data) {
+            if (data1.status === 400 || !data) {
                 // window.alert("Email exists..");
-                notify2("email already exists");
+                notify2("email not found");
             }
             else if (data1.status === 402 || !data) {
                 // window.alert("some field is empty..")
-                notify2("some field is empty..");
+                notify2("password doesn't match..");
             }
 
             setUser({ [name]: "" })
