@@ -1,40 +1,21 @@
 
 
-.container {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	/* min-height: 100vh; */
-}
-
 .screen {		
 	background: linear-gradient(90deg, #121926, #111622);		
-	position: relative;	
-	height: 600px;
-	width: 360px;	
 	box-shadow: 0px 0px 24px #111622;
 }
 
 .screen__content {
-	z-index: 1;
-	position: relative;	
 	height: 100%;
 }
 
 .screen__background {		
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 0;
 	-webkit-clip-path: inset(0 0 0 0);
 	clip-path: inset(0 0 0 0);	
 }
 
 .screen__background__shape {
 	transform: rotate(45deg);
-	position: absolute;
 }
 
 .screen__background__shape1 {
@@ -94,10 +75,10 @@
 	border: none;
 	border-bottom: 2px solid #D1D1D4;
 	background: none;
-	padding: 10px;
+	padding: 5px;
 	padding-left: 24px;
 	font-weight: 700;
-	width: 75%;
+	width: 110%;
 	transition: .2s;
 }
 

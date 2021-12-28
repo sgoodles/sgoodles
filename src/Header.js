@@ -30,7 +30,7 @@ const Header = () => {
 
 
     return (
-        <div className="header bg-gray-900 py-0 sticky visible z-1000 top-0 ">
+        <div className="header bg-gray-900 py-0 sticky visible z-1000 top-0 overflow-y-visible">
             <div className="header-content flex justify-between items-center">
                 <div className="header-left pb-2 text-16xl font-normal cursor-pointer flex items-center mx-10 visible z-1000">
                     <div className="dropdown relative inline-block">

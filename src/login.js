@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Header.css';
-import './login.css';
+// import './login.css';
 import Register from './Register';
 import axios from 'axios';
 import Dialog from '@material-ui/core/Dialog';
@@ -132,9 +132,9 @@ function Login() {
             >
 
 
-                <div class="container">
-                    <div class="screen">
-                        <div class="screen__content">
+                <div class="container flex items-center justify-center">
+                    <div class="screen relative h-100">
+                        <div class="screen__content z-1 relative">
                             <form class="login">
                                 <div class="login__field">
                                     <i class="login__icon fas fa-envelope"></i>
@@ -168,8 +168,8 @@ function Login() {
                                 </Button>
                             </div>
                         </div>
-                        <div class="screen__background">
-                            <span class="screen__background__shape screen__background__shape4"></span>
+                        <div class="screen__background absolute z-0 inset-0">
+                            <span class="screen__background__shape screen__background__shape4 absolute"></span>
                             <span class="screen__background__shape screen__background__shape3"></span>
                             <span class="screen__background__shape screen__background__shape2"></span>
                             <span class="screen__background__shape screen__background__shape1"></span>
