@@ -69,7 +69,6 @@ class vedioQuality extends Component {
             <input
               type="checkbox"
               value="highQuality"
-              checked={this.state.selectedOption === "High Quality"}
               onChange={this.onValueChange}
             />
             High Quality on Wifi

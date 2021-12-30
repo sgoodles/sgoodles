@@ -1,100 +1,58 @@
 import React, { Component } from "react";
-import img from './img/India_flag_icon.png';
-import img1 from './img/download.png';
-import img2 from './img/images.png'
+class CheckboxComponent extends Component {
 
-class Genres extends Component {
   constructor() {
-    super();
-    this.state = {
-      name: "React"
-    };
-    this.onValueChange = this.onValueChange.bind(this);
-    this.formSubmit = this.formSubmit.bind(this);
-  }
-
-  onValueChange(event) {
-    this.setState({
-      selectedOption: event.target.value
-    });
-  }
-
-  formSubmit(event) {
-    event.preventDefault();
-    console.log(this.state.selectedOption)
-  }
-
-  render() {
-    return (
-      <form onSubmit={this.formSubmit} className="mx-10 my-10 px-5">
-        <div className="radio">
-          <label >
-            <input
-            
-              type="checkbox"
-              value="Romance"
-              checked={true}
-              onChange={this.onValueChange}
-            />
-            {/* <img src={img} className="px-5" width="80px"/> */}
-            Romance
-          </label>
-        </div>
-        <div className="radio">
-          <label >
-            <input
-              type="checkbox"
-              value="Drama"
-              
-              onChange={this.onValueChange}
-            />
-            {/* <img src={img1} className="px-5" width="80px"/> */}
-            Drama
-          </label>
-        </div>
-        <div className="radio">
-          <label >
-            <input
-              type="checkbox"
-              value="Mythology"
-              
-              onChange={this.onValueChange}
-            />
-            {/* <img src={img2} className="px-5" width="80px"/> */}
-            Mythology
-          </label>
-        </div>
-        <div className="radio">
-          <label >
-            <input
-              type="checkbox"
-              value="Lifestyle"
-              
-              onChange={this.onValueChange}
-            />
-            Lifestyle
-          </label>
-        </div>
-        <div className="radio">
-          <label >
-            <input
-              type="checkbox"
-              value="Horror"
-              
-              onChange={this.onValueChange}
-            />
-            Horror
-          </label>
-        </div>
-        
-        
-      </form>
-    );
+  super();
+  this.state = {
+    items: {}
   }
 }
 
-export default Genres;
+handleCheckboxClick = (event) => {
+  const { name, value } = event.target;
+  const item = localStorage.getItem(name);
+  if (item) {
+    console.log(`Remove item name: ${name}, value: ${value}`);
+    localStorage.removeItem(name);
+    this.setState(state => delete state.items[name])
+  } else {
+    console.log(`Set item name: ${name}, value: ${value}`);
+    localStorage.setItem(name, value);
+    this.setState(state => state.items[name] = value);
+  }
+}
 
-//<div>
-//Selected option is : {this.state.selectedOption}
-//</div>
+getLocalStorageItems = () => {
+  const storageKeys = Object.keys(localStorage);
+  let obj = {};
+  for (let i = 0; i < storageKeys.length; i++) {
+    obj[ storageKeys[i] ] = localStorage.getItem(storageKeys[i]);
+  }
+  this.setState({ items: obj });
+}
+
+componentWillMount() {
+  this.getLocalStorageItems();
+}
+
+render() {
+  const { items } = this.state;
+  return (
+    <form className="mx-10">
+      <input type="checkbox" id="Movie1" name="Movie1" value="Romance" checked={items["Movie1"] !== undefined} onChange={event => this.handleCheckboxClick(event)} />
+      <label for="Movie1"> Romance</label><br />
+      <input type="checkbox" id="Movie2" name="Movie2" value="Drama" checked={items["Movie2"] !== undefined} onChange={event => this.handleCheckboxClick(event)} />
+      <label for="Movie2"> Drama</label><br />
+      <input type="checkbox" id="Movie3" name="Movie3" value="Mythology" checked={items["Movie3"] !== undefined} onChange={event => this.handleCheckboxClick(event)} />
+      <label for="Movie3"> Mythology</label><br />
+      <input type="checkbox" id="Movie4" name="Movie4" value="Lifestyle" checked={items["Movie4"] !== undefined} onChange={event => this.handleCheckboxClick(event)} />
+      <label for="Movie4"> Lifestyle</label><br />
+      <input type="checkbox" id="Movie5" name="Movie5" value="Horror" checked={items["Movie5"] !== undefined} onChange={event => this.handleCheckboxClick(event)} />
+      <label for="Movie5"> Horror</label><br /><br/>
+      
+    </form>
+  )
+}
+}
+
+export default CheckboxComponent;
