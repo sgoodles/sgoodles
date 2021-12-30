@@ -31,7 +31,7 @@ function getSteps() {
     "Quality",
   ];
 }
-const BasicForm = () => {
+const Languages = () => {
   const { control } = useFormContext();
   return (
     <>
@@ -39,7 +39,7 @@ const BasicForm = () => {
     </>
   );
 };
-const ContactForm = () => {
+const Genre = () => {
   const { control } = useFormContext();
   return (
     <>
@@ -47,7 +47,7 @@ const ContactForm = () => {
     </>
   );
 };
-const PersonalForm = () => {
+const Vedio = () => {
   const { control } = useFormContext();
   return (
     <>
@@ -60,12 +60,12 @@ const PersonalForm = () => {
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return <BasicForm />;
+      return <Language />;
 
     case 1:
-      return <ContactForm />;
+      return <Genres />;
     case 2:
-      return <PersonalForm />;
+      return <Vedio1/>;
     default:
       return "unknown step";
   }
@@ -75,18 +75,9 @@ const OTT = () => {
   const classes = useStyles();
   const methods = useForm({
     defaultValues: {
-      firstName: "",
-      lastName: "",
-      nickName: "",
-      emailAddress: "",
-      phoneNumber: "",
-      alternatePhone: "",
-      address1: "",
-      address2: "",
-      country: "",
-      cardNumber: "",
-      cardMonth: "",
-      cardYear: "",
+      value:"",
+      name:"",
+      type:""
     },
   });
   const [activeStep, setActiveStep] = useState(0);
