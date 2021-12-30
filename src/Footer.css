@@ -1,8 +1,10 @@
-
+.footer {
+    background:#030b17;
+}
 
 .footer .footer-left{
     /* margin: 0 auto; */
-    max-width: calc(100vw - 105px);
+    max-width: calc(100vw - 205px);
 }
 
 .footer-left > span{
@@ -37,22 +39,13 @@
     transition:0.3s;
 }
 
-.footer {
-    margin-top:40px;
-    display: flex;
-    align-items: center;
-    padding:30px;
-    background:#030b17;
-    justify-content:space-between;
-}
-
 .footer-right {
     display: flex;
     /* align-items: center; */
     flex-direction: column;
     /* justify-content: space-between; */
     padding-right: 0px;
-    padding-left: 20px;
+    padding-left: 0px;
     max-width: 540px;
     
 

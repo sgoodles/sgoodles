@@ -2,11 +2,12 @@
 
 body{
   /* background-color:#0c111b; */
+  overflow-y: visible;
 }
 
 .vedio-row{
   display: flex;
-  overflow-y: hidden;
+  overflow-y: visible;
   overflow-x: scroll;
 }
 

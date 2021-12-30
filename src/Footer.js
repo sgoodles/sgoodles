@@ -5,7 +5,7 @@ import Appstore from './img/appstore.png';
 
 const Footer=()=>{
     return (
-        <div className="footer">
+        <div className="footer flex justify-between items-center p-10 my-1 ">
             <div className="footer-left">
                 <span>About OTT</span>
                 <span>Terms Of Use</span>
@@ -33,7 +33,7 @@ const Footer=()=>{
             </div>
             <div className="foot-right">
                 <span>OTT App</span>
-                <div className="App">
+                <div className="App flex">
                     <a href="https://github.com/karun-agarwal/ott">
                     <img className="play" src={Playstore}/>
                     </a>
